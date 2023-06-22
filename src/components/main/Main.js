@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Offers from './Offers'
+import Gallery from './Gallery'
+import Follow from './Follow'
 
 export default class Main extends Component {
     render() {
@@ -12,7 +14,13 @@ export default class Main extends Component {
                         onRight={this.props.onRight}
                         articles={this.props.articles}
                     />
+                    <Gallery />
                 </div>
+                <Follow
+                    contacts={this.props.contacts}
+                    mail={this.props.mail}
+                    phone={this.props.phone}
+                />
             </main>
         )
     }

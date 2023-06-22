@@ -120,6 +120,7 @@ header {
   color: #FFFFFF;
   width: 135px;
   max-height: 50px;
+  background: none;
 }
 .header .header__top {
   width: 100%;
@@ -161,8 +162,9 @@ header {
   width: 100%;
   max-width: 485px;
   align-items: center;
+  cursor: pointer;
 }
-.header .header__nav a {
+.header .header__nav p {
   color: #FFFFFF;
   font-size: 18px;
   opacity: 0.6;
@@ -171,10 +173,10 @@ header {
      -moz-user-select: none;
           user-select: none;
 }
-.header .header__nav a:hover {
+.header .header__nav p:hover {
   opacity: 1;
 }
-.header .header__nav a.active {
+.header .header__nav p.active {
   opacity: 1;
   color: #FF4B32;
   font-weight: 700;
@@ -638,6 +640,187 @@ main .list .bottom .add__coffee {
 }
 main .list .bottom .add__coffee:hover {
   background: #cc3c28;
+}
+main .gallery {
+  width: 100%;
+  min-height: 901px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+main .gallery__top {
+  width: 100%;
+  min-height: 134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+main .gallery__top .gallery__title {
+  font-family: Josefin Sans;
+  font-size: 43px;
+  font-weight: 600;
+  line-height: 130%;
+}
+main .gallery__top .gallery__desc {
+  font-size: 18px;
+  line-height: 160%;
+  opacity: 0.7;
+  width: 100%;
+  max-width: 613.783px;
+  text-align: center;
+}
+main .gallery__bottom {
+  width: 100%;
+  max-width: 463.613px;
+  min-height: 57px;
+  border-top: 2px solid #0D0402;
+  border-bottom: 2px solid #0D0402;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .gallery__btn {
+  background: none;
+  color: #FF4B32;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  transition: color 0.6s ease;
+}
+main .gallery__btn:hover {
+  color: #cc3c28;
+}
+main .gallery__photos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 590px;
+}
+main .gallery__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  height: 100%;
+  width: 364.84px;
+}
+main .follow {
+  width: 100%;
+  min-height: 650px;
+  background: #0D0402;
+  color: #FFFFFF;
+  padding: 100px 0px;
+  position: relative;
+  overflow: hidden;
+}
+main .follow__cont {
+  width: 100%;
+  max-width: 1155px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+main .follow__top {
+  width: 100%;
+  min-height: 213px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+main .follow__top .follow__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #FF4B32;
+}
+main .follow__top .follow__line {
+  width: 100%;
+  max-width: 95px;
+  background: #FF4B32;
+  margin: 40px 25px;
+  height: 2px;
+}
+main .follow__top .follow__text {
+  width: 100%;
+  max-width: 619px;
+  font-size: 43px;
+  font-family: Josefin Sans;
+  font-weight: 600;
+  line-height: 130%;
+}
+main .follow .coffee__beans {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: absolute;
+  opacity: 0.3;
+}
+main .follow .coffee__beans.left {
+  right: 832px;
+  top: -572px;
+}
+main .follow .coffee__beans.right {
+  top: -864px;
+  left: 798px;
+}
+main .follow__bottom {
+  min-height: 177px;
+  width: 100%;
+  max-width: 348px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+main .follow__bottom .follow__contacts {
+  width: 100%;
+  min-height: 97px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+main .follow__bottom .follow__contacts > a {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  gap: 15px;
+  transition: opacity 0.5s ease;
+}
+main .follow__bottom .follow__contacts > a:hover {
+  text-decoration: underline;
+  opacity: 0.6;
+}
+main .follow__bottom .follow__soc {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .follow__bottom .follow__soc > button {
+  background: none;
+  transition: transform 0.5s ease;
+}
+main .follow__bottom .follow__soc > button:hover {
+  transform: translateY(-5px);
 }
 
 footer {

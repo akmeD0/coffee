@@ -3,7 +3,7 @@ import arrow from '../../img/arrow.svg'
 import OffersList from './OffersList'
 
 export default class Offers extends Component {
-    render() {
+    render() { 
         return (
             <section className='offers' id="buy">
                 <div className='offer__topic'>

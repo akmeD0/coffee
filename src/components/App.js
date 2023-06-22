@@ -7,6 +7,12 @@ import coffee2 from '../img/coffee2.png'
 import coffee3 from '../img/coffee3.png'
 import coffee4 from '../img/coffee4.png'
 import coffee5 from '../img/coffee5.png'
+import mail from '../img/gmail loogo.svg'
+import phone from '../img/Telephone.svg'
+import twiter from '../img/Twitter.svg'
+import facebook from '../img/Facebook.svg'
+import instagram from '../img/Instagram.svg'
+import linkedIn from '../img/Linkdin.svg'
 import logo from '../img/logo.svg'
 
 export default class App extends Component {
@@ -16,15 +22,16 @@ export default class App extends Component {
             navigation: [
                 {
                     text: "Home",
-                    link: "#home"
+                    link: "home",
+                    class: 'active'
                 },
                 {
                     text: "About Us",
-                    link: "#about"
+                    link: "gallery"
                 },
                 {
                     text: "Menu",
-                    link: "#menu"
+                    link: "buy"
                 },
                 {
                     text: "Review",
@@ -32,7 +39,7 @@ export default class App extends Component {
                 },
                 {
                     text: "Contact",
-                    link: "#contact"
+                    link: "contact"
                 }
             ],
             cartList: [
@@ -114,6 +121,24 @@ export default class App extends Component {
                     desc: "Coffee that’s always you handle your own the way you like. "
                 }
             ],
+            contacts: [
+                {
+                    id: 0,
+                    image: twiter
+                },
+                {
+                    id: 1,
+                    image: facebook
+                },
+                {
+                    id: 2,
+                    image: instagram
+                },
+                {
+                    id: 3,
+                    image: linkedIn
+                }
+            ],
             cartSum: 0,
             first: 0,
             sec: 0,
@@ -134,12 +159,16 @@ export default class App extends Component {
                     nav={this.state.navigation}
                     cartSum={this.state.cartSum}
                     cartList={this.state.cartList}
+                    scrollToAnchor={this.scrollToAnchor}
                 />
                 <Main
                     onAdd={this.onAdd}
                     onLeft={this.onLeft}
                     onRight={this.onRight}
                     articles={this.state.articles}
+                    contacts={this.state.contacts}
+                    mail={mail}
+                    phone={phone}
                 />
                 <footer></footer>
             </div>
@@ -229,5 +258,12 @@ export default class App extends Component {
                 el.style.left = currentLeft + 405 + "px";
             }
         })
+    }
+    scrollToAnchor(anchorId) {
+        const anchor = document.getElementById(anchorId);
+
+        if (anchor) {
+            anchor.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 }

@@ -21,13 +21,15 @@ export default class HeaderTop extends Component {
     render() {
         return (
             <div className='header__top'>
-                <a href='index.html' className='header__logo'>
+                <button onClick={() => {
+                    window.location.reload()
+                }} className='header__logo'>
                     <img alt='Coffee' className='header__logo' src={this.logo} />
-                </a>
+                </button>
                 <div className='header__side'>
                     <nav className='header__nav'>
                         {this.nav.map((el) => (
-                            <a key={el.text} href={el.link}>{el.text}</a>
+                            <p onClick={() => this.props.scrollToAnchor(`${el.link}`)} key={el.text} className={el.class}>{el.text}</p>
                         ))}
                     </nav>
                     <div className='header__btns'>
