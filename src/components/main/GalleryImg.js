@@ -12,16 +12,16 @@ export default class GalleryImg extends Component {
         return (
             <div className='gallery__photos'>
                 <div className='gallery__column'>
-                    <img src={image1} alt='Gallery item of photo'/>
-                    <img src={image2} alt='Gallery item of photo'/>
+                    <img src={image1} alt='Gallery item of coffee'/>
+                    <img src={image2} alt='Gallery item of coffee'/>
                 </div>
                 <div className='gallery__column'>
-                    <img src={image3} alt='Gallery item of photo'/>
-                    <img src={image4} alt='Gallery item of photo'/>
+                    <img src={image3} alt='Gallery item of coffee'/>
+                    <img src={image4} alt='Gallery item of coffee'/>
                 </div>
                 <div className='gallery__column'>
-                    <img src={image5} alt='Gallery item of photo'/>
-                    <img src={image6} alt='Gallery item of photo'/>
+                    <img src={image5} alt='Gallery item of coffee'/>
+                    <img src={image6} alt='Gallery item of coffee'/>
                 </div>
             </div>
         )
